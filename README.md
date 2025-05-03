@@ -1,6 +1,12 @@
 # Description
 
-This repository is meant to serve as a general template for how to set up new repositories in the JogetOSS organization. 
+The intent of this hash variable is for app designer to factorize codes that would otherwise be repeated in multiple environment variables' values, making code upkeep difficult, into a single environment variable.
+
+The #envVariableParse.**key**# is similar to #beanshell.**key**# but it does not execute the script nor accept parameter arguments, but it will parse any hash variables found in there. Compared to the environment variable hash variable, the environment variable hash variable does **not** parse hash variables.
+
+Sample usage:
+![SCR-20250503-hmmj](https://github.com/user-attachments/assets/02efe3aa-46ee-4c5d-baf5-b35487ec4e79)
+
 
 # Getting Help
 
