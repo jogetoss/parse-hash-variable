@@ -15,6 +15,7 @@ public class Activator implements BundleActivator {
 
         //Register plugin here
         registrationList.add(context.registerService(ParseEnvironmentVariableHashVariable.class.getName(), new ParseEnvironmentVariableHashVariable(), null));
+        registrationList.add(context.registerService(ParseAppVariableHashVariable.class.getName(), new ParseAppVariableHashVariable(), null));
     }
 
     public void stop(BundleContext context) {

@@ -65,7 +65,7 @@ public class ParseEnvironmentVariableHashVariable extends DefaultHashVariablePlu
     }
 
     public String getName() {
-        return "Environment Variable Hash Variable";
+        return "Parse Environment Variable Hash Variable";
     }
 
     public String getPrefix() {
@@ -73,7 +73,7 @@ public class ParseEnvironmentVariableHashVariable extends DefaultHashVariablePlu
     }
 
     public String getVersion() {
-        return "5.0.0";
+        return "8.0.0";
     }
 
     public String getDescription() {
