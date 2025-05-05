@@ -1,5 +1,7 @@
 package org.joget.marketplace;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import org.joget.apps.app.dao.EnvironmentVariableDao;
 import org.joget.apps.app.model.AppDefinition;
 import org.joget.apps.app.model.DefaultHashVariablePlugin;
@@ -10,6 +12,8 @@ import org.joget.workflow.model.WorkflowAssignment;
 import org.springframework.context.ApplicationContext;
 
 public class ParseEnvironmentVariableHashVariable extends DefaultHashVariablePlugin {
+    
+    private static final String MESSAGE_PATH = "messages/parseEnvironmentVariableHashVariable";
 
     @Override
     public String processHashVariable(String variableKey) {
@@ -73,7 +77,7 @@ public class ParseEnvironmentVariableHashVariable extends DefaultHashVariablePlu
     }
 
     public String getVersion() {
-        return "8.0.0";
+        return Activator.PLUGIN_VERSION;
     }
 
     public String getDescription() {
@@ -94,6 +98,15 @@ public class ParseEnvironmentVariableHashVariable extends DefaultHashVariablePlu
 
     @Override
     public String getPropertyAssistantDefinition() {
-        return AppUtil.readPluginResource(getClass().getName(), "/properties/assist/parseEnvironmentVariableHashVariable.json", null, true, null);
+        return AppUtil.readPluginResource(getClass().getName(), "/properties/assist/parseEnvironmentVariableHashVariable.json", null, true, MESSAGE_PATH);
     }
+
+    @Override
+    public Collection<String> availableSyntax() {
+        Collection<String> syntax = new ArrayList<String>();
+        syntax.add("envVariableParse.key");
+        return syntax;
+    }
+    
+    
 }
