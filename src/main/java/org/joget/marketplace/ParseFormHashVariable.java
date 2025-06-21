@@ -51,7 +51,7 @@ public class ParseFormHashVariable extends FormHashVariable{
     
     @Override
     public String getPropertyAssistantDefinition() {
-        return AppUtil.readPluginResource(getClass().getName(), "/properties/assist/ParseFormHashVariable.json", null, true, MESSAGE_PATH);
+        return AppUtil.readPluginResource(getClass().getName(), "/properties/assist/parseFormHashVariable.json", null, true, MESSAGE_PATH);
     }
     
     @Override
