@@ -13,7 +13,11 @@ public class ParseFormHashVariable extends FormHashVariable{
     public String getName() {
         return "Form Data Hash Variable with parsing";
     }
-
+    
+    public String getVersion() {
+        return Activator.PLUGIN_VERSION;
+    }
+    
     public String getPrefix() {
         return "formParse";
     }
